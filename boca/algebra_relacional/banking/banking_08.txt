@@ -1,0 +1,1 @@
+pi customer_name sigma customer_name like '%o%' or customer_city like 'P%' customer

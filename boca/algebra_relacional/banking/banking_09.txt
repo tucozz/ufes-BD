@@ -1,0 +1,1 @@
+pi customer_name sigma customer_street like '%y%' or customer_name like '%y' customer

@@ -1,0 +1,1 @@
+pi branch_name sigma branch_city like '%n%' or branch_name like 'R%' branch
