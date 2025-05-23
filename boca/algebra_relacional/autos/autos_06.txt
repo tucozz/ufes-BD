@@ -1,0 +1,3 @@
+C_N = consumidores left outer join consumidores.cpf = negocios.cpf (negocios)
+
+pi consumidores.nome, consumidores.sobrenome, negocios.cgc (C_N)
