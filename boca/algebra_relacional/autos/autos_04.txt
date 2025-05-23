@@ -1,0 +1,8 @@
+A1 = rho A1 (automoveis)
+A2 = rho A2 (automoveis)
+
+P = sigma A1.fabricante = A2.fabricante and A1.modelo = A2.modelo (A1 cross join A2)
+
+R = sigma A1.preco_tabela - A2.preco_tabela > 1000 (P)
+
+pi A1.codigo -> codigo_auto1, A1.ano -> ano_auto1, A2.codigo -> codigo_auto2, A2.ano -> ano_auto2 (R)
