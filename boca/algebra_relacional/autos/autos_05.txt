@@ -1,0 +1,5 @@
+C_N = sigma consumidores.cpf = negocios.cpf (consumidores cross join negocios)
+
+R = sigma negocios.cgc = revendedoras.cgc (C_N cross join revendedoras)
+
+pi consumidores.nome, consumidores.sobrenome, revendedoras.cgc (R)
