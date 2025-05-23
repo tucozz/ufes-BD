@@ -1,0 +1,1 @@
+gamma count(modelo) -> qtd_modelos (sigma fabricante = 'Fiat' automoveis)

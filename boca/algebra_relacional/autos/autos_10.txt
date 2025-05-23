@@ -1,0 +1,4 @@
+A1 = consumidores natural join negocios
+A2 = pi consumidores.* A1
+
+pi * consumidores - A2

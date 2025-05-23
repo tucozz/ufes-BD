@@ -1,0 +1,4 @@
+A1 = consumidores full outer join negocios
+A2 = A1 full outer join revendedoras
+
+pi consumidores.nome, consumidores.sobrenome, negocios.cgc (A2)

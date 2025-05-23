@@ -1,0 +1,1 @@
+gamma count(*) -> qtd_negocios (negocios)

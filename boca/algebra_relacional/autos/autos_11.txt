@@ -1,0 +1,4 @@
+A1 = revendedoras natural join negocios
+A2 = pi revendedoras.* (A1)
+
+pi * revendedoras - A2

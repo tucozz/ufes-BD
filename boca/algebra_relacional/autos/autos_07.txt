@@ -1,0 +1,5 @@
+A1 = sigma negocios.cgc = revendedoras.cgc (negocios cross join revendedoras)
+A2 = sigma negocios.cpf = consumidores.cpf (A1 cross join consumidores)
+A3 = sigma negocios.codigo = automoveis.codigo (A2 cross join automoveis)
+
+pi consumidores.nome -> nome_c, consumidores.sobrenome -> sobrenome_c, revendedoras.nome -> nome_r, automoveis.fabricante -> fabricante, automoveis.modelo -> modelo, negocios.data -> data, negocios.preco -> preco A3
