@@ -1,0 +1,1 @@
+pi loan_number sigma amount <750 or amount >1300 loan
