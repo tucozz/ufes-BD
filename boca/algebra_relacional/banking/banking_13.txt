@@ -1,0 +1,5 @@
+A1 = customer natural join depositor
+A2 = account natural join A1
+A3 = branch natural join A2
+
+pi customer.customer_name, customer.customer_city sigma branch.branch_name like 'Perryridge' A3
