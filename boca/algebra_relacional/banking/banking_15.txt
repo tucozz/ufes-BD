@@ -1,0 +1,16 @@
+-- Clientes com conta na Perryridge
+A1 = customer natural join depositor
+A2 = account natural join A1
+A3 = branch natural join A2
+
+result1 = pi customer.customer_name, customer.customer_city sigma branch.branch_name like 'Perryridge' A3
+
+-- Clientes com empréstimo na Perryridge
+A4 = customer natural join borrower
+A5 = loan natural join A4
+A6 = branch natural join A5
+
+result2 = pi customer.customer_name, customer.customer_city sigma branch.branch_name like 'Perryridge' A6
+
+result = result1 intersect result2
+pi * result

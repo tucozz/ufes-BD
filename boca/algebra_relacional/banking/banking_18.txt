@@ -1,0 +1,15 @@
+A1 =sigma customer_name = 'Hayes' (customer)
+A2 = A1 natural join depositor
+A3 = A2 natural join account
+A4 = A3 natural join branch
+
+result1 = pi branch_name, branch_city (A4)
+
+B1 = sigma customer_name = 'Hayes' (customer)
+B2 = B1 natural join borrower
+B3 = B2 natural join loan
+B4 = B3 natural join branch
+
+result2 = pi branch_name, branch_city (B4)
+
+pi * (result1 intersect result2)

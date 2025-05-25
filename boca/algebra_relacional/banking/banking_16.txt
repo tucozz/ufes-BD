@@ -1,0 +1,6 @@
+A1 =sigma customer_name = 'Hayes' (customer)
+A2 = A1 natural join depositor
+A3 = A2 natural join account
+A4 = A3 natural join branch
+
+pi branch_name, branch_city (A4)
