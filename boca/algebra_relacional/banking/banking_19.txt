@@ -1,0 +1,4 @@
+B1 = rho b1(branch)
+B2 = rho b2(branch)
+
+pi b1.branch_name sigma b1.assets > b2.assets and b2.branch_city = 'Brooklyn' (B1 cross join B2)

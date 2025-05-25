@@ -1,0 +1,23 @@
+H1 = rho h1 (customer)
+H2 = rho h2 (depositor)
+H3 = rho h3 (account)
+
+A1 = rho a1 (customer)
+A2 = rho a2 (depositor)
+A3 = rho a3 (account)
+
+JH1 = H1 cross join H2
+JH2 = sigma h1.customer_name = h2.customer_name (JH1)
+JH3 = JH2 cross join H3
+JH4 = sigma h2.account_number = h3.account_number (JH3)
+B4 = pi h3.branch_name (JH4)
+
+JA1 = A1 cross join A2
+JA2 = sigma a1.customer_name = a2.customer_name (JA1)
+JA3 = JA2 cross join A3
+JA4 = sigma a2.account_number = a3.account_number (JA3)
+JA5 = JA4 cross join B4
+JA6 = sigma a3.branch_name = h3.branch_name (JA5)
+JA7 = sigma a1.customer_name ≠ 'Hayes' (JA6)
+
+pi a1.customer_name (JA7)

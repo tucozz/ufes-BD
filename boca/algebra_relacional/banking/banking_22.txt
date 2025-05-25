@@ -1,0 +1,4 @@
+c1 = rho C1 (customer)
+c2 = rho C2 (customer)
+
+pi C1.customer_name sigma C1.customer_street = C2.customer_street and C1.customer_city ≠ C2.customer_city and C1.customer_name ≠ C2.customer_name (c1 cross join c2)

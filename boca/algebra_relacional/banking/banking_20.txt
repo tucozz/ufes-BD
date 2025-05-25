@@ -1,0 +1,6 @@
+A1 = rho a1(account)
+A2 = rho a2(account)
+
+FILTRO = sigma a1.balance < a2.balance and a2.branch_name = 'North Town' (A1 cross join A2)
+
+pi a1.account_number (FILTRO)

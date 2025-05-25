@@ -1,0 +1,4 @@
+A1 = rho a1 (loan)
+A2 = rho a2 (loan)
+
+pi a1.loan_number sigma a1.amount <= a2.amount and a2.branch_name = 'Downtown' (A1 cross join A2)
