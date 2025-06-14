@@ -1,0 +1,1 @@
+SELECT CONCAT(salario_max, ' ', COUNT(*)) AS sal_e_num FROM (SELECT salary * months AS total_salary FROM Employee) AS totals JOIN (SELECT MAX(salary * months) AS salario_max FROM Employee) AS max_result ON totals.total_salary = max_result.salario_max GROUP BY max_result.salario_max
