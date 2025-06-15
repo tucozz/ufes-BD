@@ -1,0 +1,1 @@
+SELECT DISTINCT course_id FROM prereq WHERE prereq_id IN (SELECT course_id FROM prereq NATURAL JOIN course WHERE prereq_id = (SELECT course_id FROM course WHERE title = 'CÁLCULO III'))
