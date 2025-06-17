@@ -1,0 +1,1 @@
+SELECT CEIL(AVG(salary) - AVG(CAST(REPLACE(salary, '0', '') AS UNSIGNED))) AS QTDE_ERRO FROM Employee;

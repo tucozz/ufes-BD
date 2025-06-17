@@ -1,0 +1,1 @@
+SELECT DISTINCT prereq_id FROM prereq NATURAL JOIN course WHERE title = 'SINAIS E SISTEMAS'
