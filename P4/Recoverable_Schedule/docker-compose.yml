@@ -1,0 +1,62 @@
+---
+#========================================================================
+# Copyright Universidade Federal do Espirito Santo (Ufes)
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#
+# This program is released under license GNU GPL v3+ license.
+#
+#========================================================================
+
+# Refs:
+#
+# How to run it:
+#   docker compose up -d
+#
+# How to stop it:
+#   docker compose down
+
+services:
+  db_mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: Example@1
+    volumes:
+      - ./mysql/schedule.sql:/docker-entrypoint-initdb.d/01.sql
+      - ./mysql/example_01.sql:/docker-entrypoint-initdb.d/02.sql
+
+  db_mysql8:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: Example@1
+    volumes:
+      - ./mysql/schedule.sql:/docker-entrypoint-initdb.d/01.sql
+      - ./mysql/example_01.sql:/docker-entrypoint-initdb.d/02.sql
+
+  db_postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: Example@1
+    volumes:
+      - ./postgres/schedule.sql:/docker-entrypoint-initdb.d/01.sql
+      - ./postgres/example_01.sql:/docker-entrypoint-initdb.d/02.sql
+
+  adminer:
+    image: adminer
+    depends_on:
+      - db_mysql
+      - db_mysql8
+      - db_postgres
+    ports:
+      - 8080:8080
